@@ -1,0 +1,14 @@
+
+sphinx
+ipython
+matplotlib
+numpydoc
+sphinx-copybutton
+myst-parser # add markdown support
+sphinx-autobuild
+
+sphinxcontrib-bibtex
+sphinx_design
+shibuya
+# sphinx_rtd_theme
+

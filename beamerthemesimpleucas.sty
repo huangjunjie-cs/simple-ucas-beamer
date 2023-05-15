@@ -1,0 +1,272 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\mode<presentation>
+
+
+\RequirePackage{tikz}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{graphicx}
+\RequirePackage{grffile}
+\RequirePackage{longtable}
+\RequirePackage{wrapfig}
+\RequirePackage{rotating}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{textcomp}
+\RequirePackage{xcolor}
+\RequirePackage{lmodern}
+\RequirePackage{tcolorbox}
+\RequirePackage{multicol}
+\RequirePackage[round]{natbib}
+\RequirePackage[font=scriptsize,labelfont=bf]{caption}
+\hypersetup{
+    hidelinks,
+    citecolor=black
+}
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+
+
+\definecolor{CASBlue}{rgb}{0.040, 0.290, 0.580}
+\definecolor{DISGreen}{rgb}{0.204, 0.439, 0.749}
+\definecolor{ICTBlue}{rgb}{0.208, 0.498, 0.714}
+\definecolor{ICTBlue1}{HTML}{0083c3}
+\definecolor{ICTBlue2}{HTML}{005192}
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+\RequirePackage{lmodern} 
+\RequirePackage{tcolorbox}
+
+% default theme Frankfurt.sty
+\usetheme{default}
+\usecolortheme{whale}
+\usefonttheme[onlymath]{serif}
+\useinnertheme{circles}
+
+\AtBeginSection[]{
+    \begin{frame}<beamer>
+        \frametitle{Outline}
+            \tableofcontents[currentsection]
+        \end{frame}
+    \subsection{}
+}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\setbeamercolor{palette primary}{bg=CASBlue,fg=white}
+\usebackgroundtemplate{
+    \tikz[overlay, remember picture]
+    \node[anchor=south, at=(current page.south), yshift=0pt] {
+        \includegraphics[width=0.85\paperwidth]{assets/footer_ucas_logo.pdf}
+    };
+}
+
+
+\setbeamertemplate{footline}[frame number]
+\setbeamercovered{transparent=30}
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setlength{\leftmargini}{0.0cm}
+\setlength{\leftmarginii}{0.5cm}
+\setlength{\leftmarginiii}{0.5cm}
+
+
+\setbeamertemplate{frametitle}[default]
+\setbeamercolor{frametitle}{fg=white}
+% \addtobeamertemplate{frametitle}{\hfill} 
+
+% \setbeamercolor{page number in head/foot}{fg=white}
+\setbeamercolor{itemize/enumerate body}{fg=ICTBlue}
+\setbeamercolor{itemize/enumerate subbody}{fg=black}
+\setbeamercolor{itemize/enumerate subsubbody}{fg=black}
+
+
+
+% http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
+\RequirePackage{fontawesome5}
+\setbeamertemplate{itemize item}[square]{}
+\setbeamertemplate{itemize subitem}{\tiny \faClone[regular]}
+\setbeamertemplate{itemize/enumerate body begin}{\large}
+
+
+% remove navigateions
+\beamertemplatenavigationsymbolsempty
+
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
+% vim:ft=tex
+
+\defaultfontfeatures{Path = assets/fonts/zh_CN-Adobe/, Mapping=tex-text}
+
+\setCJKmainfont[
+BoldFont=AdobeHeitiStd-Regular.otf,
+ItalicFont=AdobeKaitiStd-Regular.otf,
+SmallCapsFont=AdobeHeitiStd-Regular.otf
+]{AdobeSongStd-Light.otf}
+\setCJKsansfont{AdobeHeitiStd-Regular.otf}
+\setCJKmonofont{AdobeFangsongStd-Regular.otf}
+
+\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+% \newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+% texit is used kaishu, so I change kaishu to fangsong
+\newcommand*{\kaishu}{\CJKfamily{zhfs}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+
+\RequirePackage{algorithm2e}
+\RequirePackage{algorithmic}
+\RequirePackage{float}
+\RequirePackage{dsfont}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{threeparttable}
+\RequirePackage{subfig}
+
+\RequirePackage{tikz}
+\usetikzlibrary {%
+arrows.meta,
+backgrounds,
+positioning,
+fit,
+petri,
+shapes,
+arrows,
+snakes,
+decorations,
+external,
+calc,
+patterns,
+positioning,
+decorations.pathmorphing
+}
+
+\RequirePackage{xpatch}
+
+\makeatletter
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{2ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{0.5ex}
+\newcommand{\my@beamer@setsep}{%
+\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{\my@beamer@itemsepi}% separation for first level
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{\my@beamer@itemsepii}% separation for second level
+       % \setlength\topsep{\my@beamer@itemsepi}% separation for second level
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{\my@beamer@itemsepiii}% separation for third level
+         % \setlength\topsep{\my@beamer@itemsepii}% separation for second level
+   \fi\fi\fi}
+\xpatchcmd{\itemize}
+  {\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\xpatchcmd{\beamer@enum@}
+  {\def\makelabel}{\my@beamer@setsep\def\makelabel}{}{}
+\newcommand\setlistsep[3]{%
+    \setlength{\my@beamer@itemsepi}{#1}%
+    \setlength{\my@beamer@itemsepii}{#2}%
+    \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\makeatother
+
+\newcommand{\tinycite}[2][2]{{~\tiny{(\citeauthor[#1]{#2}})}}
+\newcommand{\Real}{\ensuremath{\mathbb{R}}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\figref}[1]{Fig~\ref{#1}}
+\newcommand{\tableref}[1]{Table~\ref{#1}} 
+\newcommand{\equref}[1]{Equation~\ref{#1}} 
+\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+
+
+% write the title page
+\setbeamertemplate{title page}[empty]
+
+\defbeamertemplate*{title page}{simpleucas}[1][] {
+  {
+  \usebackgroundtemplate{}
+  \begin{frame}[noframenumbering,plain]
+   \vbox{}
+    \vfill
+    \begingroup
+      \centering
+      \begin{beamercolorbox}[sep=8pt,center,#1]{title}
+        \usebeamerfont{title}\inserttitle\par%
+        \ifx\insertsubtitle\@empty%
+        \else%
+          \vskip0.25em%
+          {%
+            \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
+          }%
+        \fi%     
+      \end{beamercolorbox}%
+      \vskip1em\par
+      \begin{beamercolorbox}[sep=8pt,center,#1]{author}
+        \usebeamerfont{author}\insertauthor
+      \end{beamercolorbox}
+      \begin{beamercolorbox}[sep=8pt,center,#1]{institute}
+        \usebeamerfont{institute}\insertinstitute
+      \end{beamercolorbox}
+      \begin{beamercolorbox}[sep=8pt,center,#1]{date}
+        \usebeamerfont{date}\insertdate
+      \end{beamercolorbox}\vskip0.5em
+      {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+    \endgroup
+    \vfill
+  \end{frame}
+  }
+}
+
+
+\newcommand{\qapage}{
+  {
+  
+    \usebackgroundtemplate{
+      \tikz[overlay,remember picture] 
+      \fill[CASBlue] (current page.south west) rectangle (current page.north east);
+    }
+    \begin{frame}[c,noframenumbering,plain]{}
+    % \setbeamercolor{normal text}{fg=darkgray,bg=white}
+    % \setbeamercolor{structure}{fg=CASBlue}
+    % \setbeamercolor{block title}{fg=airforceblue,bg=morelightgray}
+    % \setbeamercolor{block body}{fg=darkgray,bg=morelightgray}
+    \centering
+    \usebeamercolor[fg]{frametitle}
+    \Huge $$\mathcal Q \& \mathcal A$$
+    \Huge $$Thank\ you!$$
+    \Large \textbf{感谢您的聆听和反馈}
+    \end{frame}
+  }
+}
+
+\newcommand{\refpage}{
+  \section<presentation>*{\appendixname}
+  \subsection<presentation>*{Reference}
+  \begin{frame}[allowframebreaks,noframenumbering,plain]
+  \frametitle<presentation>{Reference}
+  \tiny
+      \bibliographystyle{abbrvnat}
+      \bibliography{refs}
+  \end{frame}
+}
+
+
+
+\mode
+<all>
+

@@ -1,0 +1,59 @@
+name: CI
+
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+
+jobs:
+    build:
+      runs-on: ${{ matrix.os }}
+        
+      strategy:
+        matrix:
+          os: [ubuntu-22.04]
+
+      steps:
+        - name: CHeckout Repo
+          uses: actions/checkout@v3
+        - name: Install
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.10'
+        - run: which python
+        - name: Run installation.
+          run: |
+            pip install -r requirements.txt
+            pip install -r requirements-dev.txt
+        - name: Make docs
+          run: |
+            sphinx-build -b html docs build
+
+
+        - name: Install sty
+          run: |
+            cp beamerthemesimpleucas.sty examples/
+            cp -r assets examples/
+
+        - name: Make examples
+          uses: xu-cheng/latex-action@v2
+          with:
+            working_directory: examples
+            latexmk_use_xelatex: true
+            root_file: |
+              demo-chinese.tex
+              dasfaa2023-example.tex
+
+        - name: Publish example
+          run: |
+            cp examples/dasfaa2023-example.pdf build/
+            cp examples/demo-chinese.pdf build/
+
+        - name: Deploy Website
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./build
