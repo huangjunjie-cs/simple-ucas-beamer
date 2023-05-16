@@ -42,7 +42,7 @@ jobs:
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
         draft: false
-        prerelease: false
+        prerelease: true
 
     - name: Upload Release Asset
       id: upload-release-asset 
@@ -51,7 +51,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} 
-        asset_path: ./simle-ucas-theme.tar.gz
-        asset_name: simle-ucas-theme.tar.gz
+        asset_path: ./simple-ucas-theme.tar.gz
+        asset_name: simple-ucas-theme.tar.gz
         asset_content_type: application/gzip
 
