@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>FAQ (Frequently Asked Questions) - simple-ucas-beamer 0.0.1 文档</title>
+    <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="Features" href="fea.html" />
+  <script>
+    const isDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const sessionTheme = sessionStorage['_theme']
+    if (sessionTheme) {
+      document.documentElement.classList.add(sessionTheme)
+    } else if (isDarkTheme) {
+      document.documentElement.classList.add('dark')
+    }
+  </script><link rel="stylesheet" href="../_static/pygments.css?v=2023.3.19" type="text/css" />
+    <link rel="stylesheet" href="../_static/shibuya.css?v=2023.3.19" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sxgnn.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link media="print" rel="stylesheet" type="text/css" href="../_static/print.css?v=2023.3.19" />
+    <style>
+:root {
+  --sy-f-sys:-apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Droid Sans, Helvetica Neue;--sy-f-cjk:PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei;--sy-f-heading:var(--sy-f-sys), var(--sy-f-cjk), sans-serif;--sy-f-text:var(--sy-f-sys), var(--sy-f-cjk), sans-serif;--sy-f-mono:Menlo, Monaco, Consolas, "Courier New", monospace;--sy-c-divider:rgba(var(--sy-rc-text), 0.1);--sy-c-divider-weak:rgba(var(--sy-rc-text), 0.05);--sy-c-border:rgba(var(--sy-rc-text), 0.14);--sy-s-banner-height:0rem;--sy-s-navbar-height:4rem;--sy-s-offset-top:calc(var(--sy-s-navbar-height) + var(--sy-s-banner-height));--sy-c-link:rgb(var(--sy-rc-theme));
+  --sy-rc-theme:143, 118, 214;--sy-rc-bg:255, 255, 255;--sy-rc-invert:0, 0, 0;--sy-rc-text:0, 0, 0;--sy-c-bg:#fff;--sy-c-bg-weak:#f9f9f9;--sy-c-text:#374151;--sy-c-text-weak:#6b7280;--sy-c-heading:#111827;--sy-c-bold:#111827;--sy-c-foot-text:#232226;--sy-c-foot-bg:#fafafa;--sy-c-foot-divider:#f0f0f0;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --sy-rc-theme:143, 118, 214;--sy-rc-bg:255, 255, 255;--sy-rc-invert:0, 0, 0;--sy-rc-text:0, 0, 0;--sy-c-bg:#fff;--sy-c-bg-weak:#f9f9f9;--sy-c-text:#374151;--sy-c-text-weak:#6b7280;--sy-c-heading:#111827;--sy-c-bold:#111827;--sy-c-foot-text:#232226;--sy-c-foot-bg:#fafafa;--sy-c-foot-divider:#f0f0f0;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sy-rc-theme:143, 118, 214;--sy-rc-bg:18, 18, 18;--sy-rc-invert:255, 255, 255;--sy-rc-text:255, 255, 255;--sy-c-bg:#121212;--sy-c-bg-weak:#212833;--sy-c-text:#cedbea;--sy-c-text-weak:#77889f;--sy-c-heading:#ebf0f4;--sy-c-bold:#ebf0f4;--sy-c-foot-text:#eee;--sy-c-foot-bg:#000;--sy-c-foot-divider:#000;
+  }
+}
+html.light {
+  --sy-rc-theme:143, 118, 214;--sy-rc-bg:255, 255, 255;--sy-rc-invert:0, 0, 0;--sy-rc-text:0, 0, 0;--sy-c-bg:#fff;--sy-c-bg-weak:#f9f9f9;--sy-c-text:#374151;--sy-c-text-weak:#6b7280;--sy-c-heading:#111827;--sy-c-bold:#111827;--sy-c-foot-text:#232226;--sy-c-foot-bg:#fafafa;--sy-c-foot-divider:#f0f0f0;
+}
+html.dark {
+  --sy-rc-theme:143, 118, 214;--sy-rc-bg:18, 18, 18;--sy-rc-invert:255, 255, 255;--sy-rc-text:255, 255, 255;--sy-c-bg:#121212;--sy-c-bg-weak:#212833;--sy-c-text:#cedbea;--sy-c-text-weak:#77889f;--sy-c-heading:#ebf0f4;--sy-c-bold:#ebf0f4;--sy-c-foot-text:#eee;--sy-c-foot-bg:#000;--sy-c-foot-divider:#000;
+}
+</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-heading: Inter, var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="FAQ (Frequently Asked Questions)"/>
+<meta name="twitter:card" content="summary"/></head>
+<body><div class="document"><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <div class="sy-head-brand flex items-center">
+      <div class="md:hidden flex items-center">
+        <button class="hamburger js-menu mr-3" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </button>
+      </div>
+      <a href="../index.html">
+        
+        
+        <strong>simple-ucas-beamer</strong>
+      </a>
+      
+    </div>
+    <div class="sy-head-actions flex gap-2 items-center print:hidden">
+      <nav class="sy-head-nav hidden md:block">
+      </nav>
+      <div class="hidden md:block"><form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="搜索" />
+  <kbd>/</kbd>
+</form>
+      </div>
+      <button class="js-theme theme-switch flex items-center ml-1" data-aria-light="Switch to dark mode" data-aria-dark="Switch to light mode">
+        <i class="i-icon theme-icon"></i>
+      </button>
+      
+        <button class="js-menu xl:hidden flex items-center ml-1" aria-label="Show table of contents" type="button" aria-controls="rside" aria-expanded="false">
+          <i class="i-icon outdent"></i>
+        </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-64 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="md:hidden pt-6 px-6"><form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="搜索" />
+  <button>提交</button>
+</form>
+      </div>
+      <div class="md:hidden pt-3 px-6">
+      </div>
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc">
+          <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install or Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fea.html">Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ (Frequently Asked Questions)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-icon close"></i>
+    </button>
+    <div class="sy-scrollbar px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>目录</h3>
+    <ul>
+<li><a class="reference internal" href="#id1">为什么做这个项目</a></li>
+<li><a class="reference internal" href="#id5">部分页面不需要背景</a></li>
+<li><a class="reference internal" href="#id6">如何引用中带入会议名称</a></li>
+<li><a class="reference internal" href="#reference">如何加入Reference页</a></li>
+<li><a class="reference internal" href="#why-not-16-9">Why not 16:9</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+
+
+  </div><div id="ethical-ad-placement"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-6 xl:px-12">
+        <article class="yue" role="main">
+          <section id="faq-frequently-asked-questions">
+<h1>FAQ (Frequently Asked Questions)<a class="headerlink" href="#faq-frequently-asked-questions" title="此标题的永久链接">¶</a></h1>
+<section id="id1">
+<h2>为什么做这个项目<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h2>
+<p>做这个项目的初衷是一直以来都自己在用的一个模板，在毕业之际，封装出来，供人查看也好，自己回顾也好，算是一个对自己的交代。</p>
+<p>最开始做这个项目的原因是因为之前流传一个带有国科大的logo的模板，其中footer的图片（见下图），还挺有意思的 (雁栖湖+大学），但是由于最早的版本是png的。这对于logo类图片的矢量化的趋势是矛盾的。因此，基于那个图片，我用tikz的工具简单花了一下（主要是画直线）。</p>
+<figure class="align-default">
+<img alt="a footer ucas logo used in this project" src="../_images/footer_ucas_logo.png" />
+</figure>
+<p>另外，值得一题的是，在国科大硕博论文模板中，我发现其中的 <a class="reference internal" href="#id7" id="id2"><span>[logo圆不圆]</span></a> ，提交了issues，并没有人关注。也是可惜...</p>
+<figure class="align-default">
+<img alt="logo问题" src="https://user-images.githubusercontent.com/11959047/138208393-28203c7e-d7ec-4880-b1dc-9b329ea185f6.png" />
+</figure>
+<p>其实国科大的logo是很容易得到矢量图的。不过大家科研太忙，<a class="reference internal" href="#nbcs" id="id3"><span>[nbcs]</span></a> 罢了...
+<a class="reference internal" href="#logo" id="id4"><span>[国科大官网logo]</span></a> 给出了原版AI的图，使用AI工具简单导出一下就行...</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+小声细语（🤫)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Be to honest, 一个每年毕业上万理工科学生的模板，连学校的logo的圆都画不圆真心有点...</p>
+</div>
+</details></section>
+<section id="id5">
+<h2>部分页面不需要背景<a class="headerlink" href="#id5" title="此标题的永久链接">¶</a></h2>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="nb">{</span>
+</span><span id="1-2"><span class="k">\usebackgroundtemplate</span><span class="nb">{}</span>
+</span><span id="1-3"><span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}{</span>xxx<span class="nb">}</span>
+</span><span id="1-4">
+</span><span id="1-5">...
+</span><span id="1-6"><span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+</span><span id="1-7"><span class="nb">}</span>
+</span></pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>如何引用中带入会议名称<a class="headerlink" href="#id6" title="此标题的永久链接">¶</a></h2>
+<p>常见的beamer中，引用使用 <code class="code docutils literal notranslate"><span class="pre">\cite</span></code>。但是在计算机会议中，我们通常会有一些简写，例如AAAI, ICML, ICLR等。因此，需要定义一个新的命令如下</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\tinycite</span><span class="nb">}</span>[2][2]<span class="nb">{{</span>~<span class="k">\tiny</span><span class="nb">{</span>(<span class="k">\citeauthor</span><span class="na">[#1]</span><span class="nb">{</span>#2<span class="nb">}}</span>)<span class="nb">}}</span>
+</span></pre></div>
+</div>
+<p>使用如下:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="k">\tinycite</span><span class="na">[AAAI2021]</span><span class="nb">{</span>xxx<span class="nb">}</span>
+</span></pre></div>
+</div>
+</section>
+<section id="reference">
+<h2>如何加入Reference页<a class="headerlink" href="#reference" title="此标题的永久链接">¶</a></h2>
+<p>这个倒不算复杂，需要注意的问题主要是：</p>
+<ul class="simple">
+<li><p>不断页，尽量压缩（字体小)</p></li>
+<li><p>无页脚number</p></li>
+<li><p>可以跳转</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Use refpage</label><div class="sd-tab-content docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="k">\refpage</span>
+</span></pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Use code</label><div class="sd-tab-content docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="k">\section</span>&lt;presentation&gt;*<span class="nb">{</span><span class="k">\appendixname</span><span class="nb">}</span>
+</span><span id="1-2"><span class="k">\subsection</span>&lt;presentation&gt;*<span class="nb">{</span>Reference<span class="nb">}</span>
+</span><span id="1-3"><span class="k">\begin</span><span class="nb">{</span>frame<span class="nb">}</span>[allowframebreaks,noframenumbering,plain]
+</span><span id="1-4">  <span class="k">\frametitle</span>&lt;presentation&gt;<span class="nb">{</span>Reference<span class="nb">}</span>
+</span><span id="1-5">  <span class="k">\tiny</span>
+</span><span id="1-6">  <span class="k">\bibliographystyle</span><span class="nb">{</span>abbrvnat<span class="nb">}</span>
+</span><span id="1-7">  <span class="k">\bibliography</span><span class="nb">{</span>refs<span class="nb">}</span>
+</span><span id="1-8"><span class="k">\end</span><span class="nb">{</span>frame<span class="nb">}</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="why-not-16-9">
+<h2>Why not 16:9<a class="headerlink" href="#why-not-16-9" title="此标题的永久链接">¶</a></h2>
+<p>在我上学的时候(2023年)，国科大缺少教室和投影设备，最好的设备就是4:3的投影仪。所以，请使用4:3。
+并且不要选用过于复杂的颜色(显示不出来或者失真）。</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="此标题的永久链接">¶</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="logo" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">国科大官网logo</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.ucas.edu.cn/site/11?zu=64925">https://www.ucas.edu.cn/site/11?zu=64925</a></p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">logo圆不圆</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/mohuangrui/ucasthesis/issues/360">https://github.com/mohuangrui/ucasthesis/issues/360</a></p>
+</div>
+<div class="citation" id="nbcs" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">nbcs</a><span class="fn-bracket">]</span></span>
+<p>Nobody cares.</p>
+</div>
+</div>
+</section>
+</section>
+
+        </article>
+        
+      </div>
+      <div class="min-w-0 max-w-6xl px-6 pb-6 xl:pt-6 xl:px-12">
+        <div class="navigation flex print:hidden">
+  <div class="navigation-prev">
+    <a href="fea.html">
+      <i class="i-icon chevron"></i>
+      <div class="page-info">
+        <span>Previous</span>
+        
+        <div class="title">Features</div>
+        
+      </div>
+    </a>
+  </div>
+  
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2023, junjiehuang.cs@gmail.com</p>
+        
+        <p>
+          Made with
+          
+          <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+          
+          <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+        </p>
+      </div>
+      <div class="sy-foot-socials">
+      </div>
+    </div>
+  </div>
+</footer></div>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/sphinx_highlight.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
+      <script src="../_static/design-tabs.js"></script>
+      <script src="../_static/shibuya.js?v=2023.3.19"></script>
+    
+</body>
+</html>
