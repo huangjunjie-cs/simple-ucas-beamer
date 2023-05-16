@@ -61,12 +61,7 @@ FAQ (Frequently Asked Questions)
 
 .. code-block:: latex
 
-   code
-
-
-   
-
-
+   \tinycite[AAAI2021]{xxx}
 
 
 

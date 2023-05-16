@@ -11,6 +11,7 @@ Welcome to simple-ucas-beamer's documentation!
    :caption: Contents:
    
    secs/install.rst
+   secs/fea.rst
    secs/qa.rst
    
 see this example 
