@@ -12,3 +12,5 @@ sphinx_design
 shibuya
 # sphinx_rtd_theme
 
+pdf2image
+
