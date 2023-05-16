@@ -13,17 +13,17 @@ Just use \ :code:`\\refpage`\ and \ :code:`\\qapage`\
 
 .. grid:: 2
 
-    .. grid-item-card:: \ :code:`\\refpage`\
+    .. grid-item-card:: \ :code:`\\qapage`\
 
         .. figure:: ../_static/imgs/example_27.jpg
-           :alt: \ :code:`\refpage`\
+           :alt: \ :code:`\qapage`\
         
            
 
-    .. grid-item-card:: \ :code:`\\qapage`\
+    .. grid-item-card:: \ :code:`\\refpage`\
          
       .. figure:: ../_static/imgs/example_28.jpg
-         :alt: \ :code:`\qapage`\
+         :alt: \ :code:`\refpage`\
 
 
 

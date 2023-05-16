@@ -18,12 +18,11 @@ Just use \ :code:`\refpage`\ and \ :code:`\qapage`\
 See Example:
 
 .. figure:: docs/_static/imgs/example_27.jpg
-   :alt: \ :code:`\refpage`\
+   :alt: \ :code:`\qapage`\
         
-           
 
 .. figure:: docs/_static/imgs/example_28.jpg
- :alt: \ :code:`\qapage`\
+ :alt: \ :code:`\refpage`\
 
 
 UCAS footer logo
