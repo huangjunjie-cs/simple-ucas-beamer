@@ -3,12 +3,18 @@
 Simple-UCAS-Beamer
 ==================
 
-Simple UCAS Beamer (LaTeX)
+:: 
+ 
+  UCAS (University of Chinese Academy of Sciences) is a renowned graduate school and research institution based in China. 
+  It is a prominent institution directly affiliated with the Chinese Academy of Sciences (CAS).
+
+  ----------- From ChatGPT
+
+This is a simple beamer theme for UCAS. More information about this theme, see the \ `docs <https://huangjunjie-cs.github.io/simple-ucas-beamer/>`_.
 
 
 Install
 -------
-
 
 Using Github
 ============
@@ -25,30 +31,26 @@ Download \ `beamerthemesimpleucas <https://github.com/huangjunjie-cs/simple-ucas
    latexmk -c
 
 
-
-Features
+Examples
 --------
 
 
-
-QA pages and Reference pages
-==============================
-
-Just use \ :code:`\refpage`\ and \ :code:`\qapage`\
-
-See Example:
-
-.. figure:: docs/_static/imgs/example_27.jpg
-   :alt: \ :code:`\qapage`\
+.. figure:: docs/_static/imgs/zwj_0.jpg
+   :alt: zwj 
         
+.. figure:: docs/_static/imgs/zwj_1.jpg
+   :alt: zwj 
 
-.. figure:: docs/_static/imgs/example_28.jpg
- :alt: \ :code:`\refpage`\
+.. figure:: docs/_static/imgs/zwj_2.jpg
+   :alt: zwj 
+
+.. figure:: docs/_static/imgs/zwj_3.jpg
+   :alt: zwj 
+
+.. figure:: docs/_static/imgs/zwj_4.jpg
+   :alt: zwj 
 
 
-UCAS footer logo
-================
 
-.. figure:: assets/footer_ucas_logo.png
-   :alt: a footer ucas logo used in this project 
+
 

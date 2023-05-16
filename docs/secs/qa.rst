@@ -101,6 +101,11 @@ FAQ (Frequently Asked Questions)
          \bibliography{refs}
        \end{frame}
 
+Why not 16:9
+============
+
+在我上学的时候(2023年)，国科大缺少教室和投影设备，最好的设备就是4:3的投影仪。所以，请使用4:3。
+并且不要选用过于复杂的颜色(显示不出来或者失真）。
 
 
 

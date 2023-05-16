@@ -14,8 +14,12 @@ Welcome to simple-ucas-beamer's documentation!
    secs/fea.rst
    secs/qa.rst
    
-see this example 
 
+
+Full Examples
+=============
+
+See this example used in \ `DASFAA2023 <https://link.springer.com/chapter/10.1007/978-3-031-30672-3_25>`_.
 
 .. raw:: html
 
