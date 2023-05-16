@@ -73,7 +73,35 @@ FAQ (Frequently Asked Questions)
 
 + 不断页，尽量压缩（字体小)
 + 无页脚number\ 
-+ 
++ 可以跳转
+
+
+
+
+.. tab-set::
+
+   .. tab-item:: Use \refpage
+
+     .. code-block:: latex
+     
+        \refpage
+     
+      
+
+   .. tab-item:: Use code
+
+     .. code-block:: latex
+     
+       \section<presentation>*{\appendixname}
+       \subsection<presentation>*{Reference}
+       \begin{frame}[allowframebreaks,noframenumbering,plain]
+         \frametitle<presentation>{Reference}
+         \tiny
+         \bibliographystyle{abbrvnat}
+         \bibliography{refs}
+       \end{frame}
+
+
 
 
 
