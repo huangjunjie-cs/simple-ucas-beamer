@@ -31,7 +31,7 @@ jobs:
         cp -r assets theme/
         cp examples/demo-chinese.tex theme/main.tex
         cp examples/demo-chinese.bib theme/refs.bib
-        tar -czvf simle-ucas-theme.tar.gz theme/
+        tar -czvf simple-ucas-theme.tar.gz theme/
 
     - name: Create Release
       id: create_release
