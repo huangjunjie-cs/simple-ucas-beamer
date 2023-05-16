@@ -17,20 +17,13 @@ Just use \ :code:`\refpage`\ and \ :code:`\qapage`\
 
 See Example:
 
-.. grid:: 2
-
-    .. grid-item-card::  \ :code:`\refpage`\
-
-        .. figure:: docs/_static/imgs/example_27.jpg
-           :alt: \ :code:`\refpage`\
+.. figure:: docs/_static/imgs/example_27.jpg
+   :alt: \ :code:`\refpage`\
         
            
 
-    .. grid-item-card::  \ :code:`\qapage`\
-         
-        .. figure:: docs/_static/imgs/example_28.jpg
-         :alt: \ :code:`\qapage`\
-
+.. figure:: docs/_static/imgs/example_28.jpg
+ :alt: \ :code:`\qapage`\
 
 
 UCAS footer logo
