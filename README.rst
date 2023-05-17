@@ -16,6 +16,13 @@ This is a simple beamer theme for UCAS. More information about this theme, see t
 Install
 -------
 
+
+Using Overleaf
+==============
+
+Just use this \ `link <https://www.overleaf.com/latex/templates/simple-ucas-theme/wjzfymxmpjgn>`_
+
+
 Using Github
 ============
 
