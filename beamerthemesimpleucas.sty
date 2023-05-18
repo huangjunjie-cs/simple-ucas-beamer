@@ -70,7 +70,16 @@
 \setbeamertemplate{footline}[frame number]
 \setbeamercovered{transparent=30}
 
-\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{section in toc}[sections circle numbered]
+% 定义一个新的命令来创建三角形标记
+\newcommand*\trianglemark{%
+  \begin{tikzpicture}[scale=0.2]
+    \filldraw[CASBlue] (0,0) -- (0,1) -- (0.86,0.5) -- cycle;
+  \end{tikzpicture}%
+}
+\setbeamertemplate{subsection in toc}{\hspace{2em}\trianglemark\ \inserttocsubsection\par}
+
+
 \setlength{\leftmargini}{0.0cm}
 \setlength{\leftmarginii}{0.5cm}
 \setlength{\leftmarginiii}{0.5cm}
@@ -192,6 +201,14 @@ decorations.pathmorphing
 \newcommand{\tableref}[1]{Table~\ref{#1}} 
 \newcommand{\equref}[1]{Equation~\ref{#1}} 
 \newcommand{\algref}[1]{Algorithm~\ref{#1}}
+
+
+
+
+% 用于改变section和subsection的样式
+% 定义一个新的计数器
+
+
 
 
 % write the title page
