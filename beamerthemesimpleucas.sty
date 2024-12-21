@@ -20,12 +20,38 @@
 \RequirePackage{lmodern}
 \RequirePackage{tcolorbox}
 \RequirePackage{multicol}
+\RequirePackage{algorithm2e}
+\RequirePackage{algorithmic}
+\RequirePackage{float}
+\RequirePackage{dsfont}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{threeparttable}
+\RequirePackage{subfig}
+
 \RequirePackage[round]{natbib}
 \RequirePackage[font=scriptsize,labelfont=bf]{caption}
 \hypersetup{
     hidelinks,
     citecolor=black
 }
+\usetikzlibrary {%
+arrows.meta,
+backgrounds,
+positioning,
+fit,
+petri,
+shapes,
+arrows,
+snakes,
+decorations,
+external,
+calc,
+patterns,
+positioning,
+decorations.pathmorphing
+}
+
 
 \newif\ifbeamer@secheader
 \beamer@secheaderfalse
@@ -39,8 +65,6 @@
 
 \DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
 \ProcessOptionsBeamer
-\RequirePackage{lmodern} 
-\RequirePackage{tcolorbox}
 
 % default theme Frankfurt.sty
 \usetheme{default}
@@ -77,7 +101,7 @@
     \filldraw[CASBlue] (0,0) -- (0,1) -- (0.86,0.5) -- cycle;
   \end{tikzpicture}%
 }
-\setbeamertemplate{subsection in toc}{\hspace{2em}\trianglemark\ \inserttocsubsection\par}
+\setbeamertemplate{subsection in toc}{\hspace{1em}\trianglemark\ \inserttocsubsection\par}
 
 
 \setlength{\leftmargini}{0.0cm}
@@ -87,13 +111,9 @@
 
 \setbeamertemplate{frametitle}[default]
 \setbeamercolor{frametitle}{fg=white}
-% \addtobeamertemplate{frametitle}{\hfill} 
-
-% \setbeamercolor{page number in head/foot}{fg=white}
 \setbeamercolor{itemize/enumerate body}{fg=ICTBlue}
 \setbeamercolor{itemize/enumerate subbody}{fg=black}
 \setbeamercolor{itemize/enumerate subsubbody}{fg=black}
-
 
 
 % http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
@@ -107,14 +127,13 @@
 \beamertemplatenavigationsymbolsempty
 
 
-\RequirePackage{fontspec}
-\RequirePackage{xeCJK}
 
 
 % https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
 % ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
 % vim:ft=tex
 
+\RequirePackage{xeCJK}
 \defaultfontfeatures{Path = assets/fonts/zh_CN-Adobe/, Mapping=tex-text}
 
 \setCJKmainfont[
@@ -138,37 +157,10 @@ SmallCapsFont=AdobeHeitiStd-Regular.otf
 \newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
 
 
-\RequirePackage{algorithm2e}
-\RequirePackage{algorithmic}
-\RequirePackage{float}
-\RequirePackage{dsfont}
-\RequirePackage{booktabs}
-\RequirePackage{multirow}
-\RequirePackage{threeparttable}
-\RequirePackage{subfig}
-
-\RequirePackage{tikz}
-\usetikzlibrary {%
-arrows.meta,
-backgrounds,
-positioning,
-fit,
-petri,
-shapes,
-arrows,
-snakes,
-decorations,
-external,
-calc,
-patterns,
-positioning,
-decorations.pathmorphing
-}
-
 \RequirePackage{xpatch}
 
 \makeatletter
-\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{2ex}
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{1ex}
 \newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1ex}
 \newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{0.5ex}
 \newcommand{\my@beamer@setsep}{%
@@ -205,15 +197,8 @@ decorations.pathmorphing
 
 
 
-% 用于改变section和subsection的样式
-% 定义一个新的计数器
-
-
-
-
 % write the title page
 \setbeamertemplate{title page}[empty]
-
 \defbeamertemplate*{title page}{simpleucas}[1][] {
   {
   \usebackgroundtemplate{}
@@ -252,7 +237,6 @@ decorations.pathmorphing
 
 \newcommand{\qapage}{
   {
-  
     \usebackgroundtemplate{
       \tikz[overlay,remember picture] 
       \fill[CASBlue] (current page.south west) rectangle (current page.north east);
@@ -266,7 +250,7 @@ decorations.pathmorphing
     \usebeamercolor[fg]{frametitle}
     \Huge $$\mathcal Q \& \mathcal A$$
     \Huge $$Thank\ you!$$
-    \Large \textbf{感谢您的聆听和反馈}
+    \Large \textbf{\kaishu 感谢您的聆听和反馈}
     \end{frame}
   }
 }
