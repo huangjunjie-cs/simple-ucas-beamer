@@ -32,24 +32,24 @@
 \RequirePackage[round]{natbib}
 \RequirePackage[font=scriptsize,labelfont=bf]{caption}
 \hypersetup{
-    hidelinks,
-    citecolor=black
+  hidelinks,
+  citecolor=black
 }
 \usetikzlibrary {%
-arrows.meta,
-backgrounds,
-positioning,
-fit,
-petri,
-shapes,
-arrows,
-snakes,
-decorations,
-external,
-calc,
-patterns,
-positioning,
-decorations.pathmorphing
+  arrows.meta,
+  backgrounds,
+  positioning,
+  fit,
+  petri,
+  shapes,
+  arrows,
+  snakes,
+  decorations,
+  external,
+  calc,
+  patterns,
+  positioning,
+  decorations.pathmorphing
 }
 
 
@@ -126,9 +126,6 @@ decorations.pathmorphing
 % remove navigateions
 \beamertemplatenavigationsymbolsempty
 
-
-
-
 % https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
 % ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
 % vim:ft=tex
@@ -137,9 +134,9 @@ decorations.pathmorphing
 \defaultfontfeatures{Path = assets/fonts/zh_CN-Adobe/, Mapping=tex-text}
 
 \setCJKmainfont[
-BoldFont=AdobeHeitiStd-Regular.otf,
-ItalicFont=AdobeKaitiStd-Regular.otf,
-SmallCapsFont=AdobeHeitiStd-Regular.otf
+  BoldFont=AdobeHeitiStd-Regular.otf,
+  ItalicFont=AdobeKaitiStd-Regular.otf,
+  SmallCapsFont=AdobeHeitiStd-Regular.otf
 ]{AdobeSongStd-Light.otf}
 \setCJKsansfont{AdobeHeitiStd-Regular.otf}
 \setCJKmonofont{AdobeFangsongStd-Regular.otf}
@@ -153,7 +150,7 @@ SmallCapsFont=AdobeHeitiStd-Regular.otf
 \newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
 % \newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
 % texit is used kaishu, so I change kaishu to fangsong
-\newcommand*{\kaishu}{\CJKfamily{zhfs}}  % 楷书
+\newcommand*{\kaishu}{\CJKfamily{zhfs}}  % 仿宋楷书
 \newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
 
 
@@ -186,16 +183,15 @@ SmallCapsFont=AdobeHeitiStd-Regular.otf
 }
 \makeatother
 
+
+% support with abbr cite  
 \newcommand{\tinycite}[2][2]{{~\tiny{(\citeauthor[#1]{#2}})}}
 \newcommand{\Real}{\ensuremath{\mathbb{R}}}
-\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\secref}[1]{Sec~\ref{#1}}
 \newcommand{\figref}[1]{Fig~\ref{#1}}
-\newcommand{\tableref}[1]{Table~\ref{#1}} 
-\newcommand{\equref}[1]{Equation~\ref{#1}} 
-\newcommand{\algref}[1]{Algorithm~\ref{#1}}
-
-
-
+\newcommand{\tableref}[1]{Tab~\ref{#1}} 
+\newcommand{\equref}[1]{Eq~\ref{#1}} 
+\newcommand{\algref}[1]{Alg~\ref{#1}}
 
 % write the title page
 \setbeamertemplate{title page}[empty]
@@ -250,7 +246,7 @@ SmallCapsFont=AdobeHeitiStd-Regular.otf
     \usebeamercolor[fg]{frametitle}
     \Huge $$\mathcal Q \& \mathcal A$$
     \Huge $$Thank\ you!$$
-    \Large \textbf{\kaishu 感谢您的聆听和反馈}
+    % \Large \textbf{\kaishu 感谢您的聆听和反馈}
     \end{frame}
   }
 }
@@ -265,7 +261,6 @@ SmallCapsFont=AdobeHeitiStd-Regular.otf
       \bibliography{refs}
   \end{frame}
 }
-
 
 
 \mode
